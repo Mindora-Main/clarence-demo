@@ -8,10 +8,26 @@ Use each Git branch as a separate Odoo.sh demo database for a clear business ope
 
 1. `demo/00-base-universal`
 2. `demo/01-al-noor-live-os`
-3. `demo/04-trading-distribution-warehouse`
+3. `demo/04-warehouse`
 4. `demo/08-field-service-after-sales`
-5. `demo/10-manufacturing-l2`
+5. `demo/10-mrp`
 6. `demo/15-holding`
+
+## Primary branch aliases
+
+Use the short branches below in Odoo.sh when a long branch name also exists:
+
+| Use this branch | Business meaning |
+|---|---|
+| `demo/03-trade` | Basic trading / distribution |
+| `demo/04-warehouse` | Warehouse, barcode, replenishment |
+| `demo/05-retail` | Retail / POS |
+| `demo/09-workshop` | Workshop manufacturing L1 |
+| `demo/10-mrp` | Manufacturing L2 |
+| `demo/11-mrp-plus` | Advanced manufacturing L3 |
+| `demo/12-staff` | HR / people operations |
+| `demo/14-control` | Governance / documents / approvals |
+| `demo/16-ai-room` | AI control room |
 
 ## How to create a database from a branch
 
@@ -23,8 +39,8 @@ Use each Git branch as a separate Odoo.sh demo database for a clear business ope
 6. Activate developer mode.
 7. Go to Apps.
 8. Remove the default Apps filter if needed.
-9. Search the technical meta module listed in `docs/branch-matrix.csv`.
-10. Install it.
+9. Use `docs/branch-matrix.csv` and `docs/install-modules-priority.md` for the module list.
+10. Install apps manually if the branch-specific meta module is not available yet.
 11. Configure the database using the branch checklist.
 
 ## Anchor demo: Al Noor
@@ -52,7 +68,7 @@ The question is whether the business has been designed as one operating system.
 
 ## Branch naming notes
 
-Some long branch names were shortened because the GitHub connector wrapper blocked a few verbose names. The matrix keeps the business meaning intact.
+Some long branch names were shortened because the GitHub connector wrapper blocked a few verbose branch operations. The short alias branches are the safer Odoo.sh targets.
 
 ## Data safety
 
