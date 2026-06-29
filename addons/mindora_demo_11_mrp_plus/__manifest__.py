@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": 'Mindora Demo 11 — MRP Plus',
-    "version": '19.0.1.0.0',
+    "version": '19.0.1.0.1',
     "category": "Mindora/Demo",
     "summary": 'Advanced manufacturing: PLM, subcontracting, traceability, advanced quality',
     "description": """Advanced manufacturing (L3): PLM, subcontracting, traceability, advanced quality, maintenance and repair.""",
@@ -23,7 +23,6 @@
         'stock_barcode',
         'quality_control',
         'quality_mrp',
-        'quality_stock',
         'maintenance',
         'mrp_maintenance',
         'repair',

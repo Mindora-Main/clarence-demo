@@ -29,6 +29,7 @@ REQUIRED_KEYS = ("name", "version", "license", "depends", "installable")
 REMOVED_ODOO_19_MODULES = {
     "pos_account": "accounting integration is provided by point_of_sale",
     "pos_stock": "inventory integration is provided by point_of_sale",
+    "quality_stock": "inventory quality integration is provided by the Odoo 19 Quality app",
 }
 
 

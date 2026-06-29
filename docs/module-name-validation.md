@@ -48,7 +48,6 @@ Reference:
 | `mrp_workorder` | 10, 11 | Work Orders/Shop Floor package |
 | `quality_control` | 10, 11 | Quality base package |
 | `quality_mrp` | 10, 11 | MRP/Quality integration |
-| `quality_stock` | 11 | Stock/Quality integration |
 | `maintenance` | 10, 11 | Maintenance app/package in target build |
 | `mrp_maintenance` | 10, 11 | MRP/Maintenance integration |
 | `mrp_plm` | 11 | PLM |
@@ -93,6 +92,10 @@ when:
   modules. `point_of_sale` depends on `stock_account` and contains the stock
   and accounting integration; the Retail meta module must not depend on the
   removed names.
+- The target Odoo.sh 19.0 build does not provide `quality_stock`. Odoo 19
+  Quality supports quality checks on inventory operations without that
+  separate dependency, so MRP Plus relies on `quality_control` and
+  `quality_mrp`.
 - The seeders use `/xmlrpc/2`. Odoo 19 documentation marks legacy XML-RPC and
   JSON-RPC services as deprecated in favor of JSON-2. The scripts remain
   appropriate for this Odoo 19 demo lab, but a JSON-2 migration should be
