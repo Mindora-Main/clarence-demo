@@ -1,0 +1,18 @@
+branch,module,database,purpose,seeder,build_first
+demo/00-base-universal,mindora_demo_00_base_universal,mindora-demo-00-base,Universal reusable base environment,,no
+demo/01-al-noor-live-os,mindora_demo_01_al_noor_live_os,mindora-demo-01-al-noor,Anchor trading installation and maintenance demo,seed_al_noor.py,yes
+demo/02-sales,mindora_demo_02_sales,mindora-demo-02-sales,CRM and sales engine,,no
+demo/03-commerce,mindora_demo_03_commerce,mindora-demo-03-commerce,Trading and distribution,,no
+demo/04-core,mindora_demo_04_core,mindora-demo-04-core,Warehouse barcode and replenishment,,no
+demo/05-retail,mindora_demo_05_retail,mindora-demo-05-retail,Retail POS and showroom,,no
+demo/06-online,mindora_demo_06_online,mindora-demo-06-online,Website ecommerce and inventory,,no
+demo/07-client-work,mindora_demo_07_client_work,mindora-demo-07-client-work,Project services and profitability,seed_services.py,no
+demo/08-field-service-after-sales,mindora_demo_08_field_service_after_sales,mindora-demo-08-field-service,Field service helpdesk and repairs,seed_al_noor.py,no
+demo/09-workshop,mindora_demo_09_workshop,mindora-demo-09-workshop,Small workshop manufacturing,seed_mrp.py,no
+demo/10-mrp,mindora_demo_10_mrp,mindora-demo-10-mrp,Factory manufacturing L2,seed_mrp.py,no
+demo/11-mrp-plus,mindora_demo_11_mrp_plus,mindora-demo-11-mrp-plus,Advanced manufacturing L3,seed_mrp.py,no
+demo/12-team,mindora_demo_12_team,mindora-demo-12-team,HR and people operations,,no
+demo/13-marketing,mindora_demo_13_marketing,mindora-demo-13-marketing,Marketing and growth engine,,no
+demo/14-board,mindora_demo_14_board,mindora-demo-14-board,Governance documents and approvals,seed_holding.py,no
+demo/15-holding,mindora_demo_15_holding,mindora-demo-15-holding,Holding control tower,seed_holding.py,no
+demo/16-room,mindora_demo_16_room,mindora-demo-16-room,AI executive control room,,no

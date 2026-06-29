@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+{
+    "name": 'Mindora Demo 15 — Holding',
+    "version": '19.0.1.0.0',
+    "category": "Mindora/Demo",
+    "summary": 'Clarence-style holding control tower',
+    "description": """Holding control tower: consolidated finance reports, projects, documents, sign, approvals, knowledge and dashboards.""",
+    "author": 'Mindora',
+    "website": 'https://github.com/Mindora-Main/clarence-demo',
+    "license": 'LGPL-3',
+    "depends": [
+        'mindora_demo_base',
+        'account',
+        'account_reports',
+        'project',
+        'hr',
+        'hr_timesheet',
+        'documents',
+        'sign',
+        'approvals',
+        'crm',
+        'sale_management',
+        'purchase',
+        'stock',
+        'spreadsheet_dashboard',
+        'web_studio',
+        'knowledge',
+    ],
+    "data": [
+
+    ],
+    "installable": True,
+    "application": False,
+    "auto_install": False,
+}

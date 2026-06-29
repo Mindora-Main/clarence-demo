@@ -1,0 +1,51 @@
+name: repo-check
+
+on:
+  push:
+    branches: ["main", "demo/**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lightweight-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Python syntax check (scripts)
+        run: |
+          python -m compileall -q scripts
+
+      - name: Seeder client regression tests
+        run: python -B -m unittest discover -s scripts -p "test_*.py" -v
+
+      - name: Validate Odoo manifests
+        run: python -B scripts/verify_odoo_manifests.py
+
+      - name: Verify repository structure
+        run: python -B scripts/verify_repo.py
+
+      - name: Branch matrix report
+        run: python -B scripts/branch_report.py
+
+      - name: Required Markdown docs present
+        run: |
+          set -e
+          for f in \
+            README.md \
+            docs/PRIMARY_ODOO_SH_BRANCHES.md \
+            docs/ODOO_SH_RUNBOOK.md \
+            docs/branch-installation.md \
+            docs/al-noor-live-demo-script.md \
+            docs/demo-data-policy.md \
+            docs/demo-reset-runbook.md \
+            docs/module-name-validation.md \
+            docs/demo-data-dictionary.md ; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+          done
+          echo "all required docs present"
