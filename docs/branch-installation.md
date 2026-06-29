@@ -89,8 +89,8 @@ dependencies.
 - **Database:** `mindora-demo-05-retail`
 - **Meta module:** `mindora_demo_05_retail`
 - **Purpose:** retail, POS, and showroom.
-- **Required apps:** Point of Sale, POS/Sales, POS/Stock, POS/Accounting,
-  Loyalty, POS Employees, Inventory, Accounting, Sales.
+- **Required apps:** Point of Sale (including its Odoo 19 stock/accounting
+  integration), POS/Sales, Loyalty, POS Employees, Sales.
 - **Optional apps:** eCommerce, Barcode, Gift Cards if exposed by the build.
 - **Post-install:** create one POS configuration, payment methods, cashier,
   loyalty program, opening cash, and showroom stock.

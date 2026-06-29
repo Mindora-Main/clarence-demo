@@ -22,6 +22,7 @@ are treated as stable:
 | Projects/people | `project`, `hr`, `hr_timesheet`, `hr_recruitment`, `hr_holidays`, `hr_attendance` |
 | Website/marketing base | `website`, `website_sale`, `website_sale_stock`, `website_crm`, `website_livechat`, `payment`, `mass_mailing`, `sms`, `utm`, `link_tracker` |
 | Manufacturing base | `mrp`, `mrp_account`, `mrp_subcontracting`, `purchase_mrp` where used by standard dependencies |
+| Point of Sale | `point_of_sale`, `pos_sale`, `pos_loyalty`, `pos_hr` |
 
 Reference:
 [`odoo/odoo` 19.0 addons](https://github.com/odoo/odoo/tree/19.0/addons).
@@ -88,6 +89,10 @@ when:
 - Odoo 19 product templates use `type="consu"` for goods and expose
   `is_storable` when Inventory is installed. Seeders introspect fields before
   setting `is_storable`.
+- Odoo 19 no longer provides the separate `pos_stock` or `pos_account`
+  modules. `point_of_sale` depends on `stock_account` and contains the stock
+  and accounting integration; the Retail meta module must not depend on the
+  removed names.
 - The seeders use `/xmlrpc/2`. Odoo 19 documentation marks legacy XML-RPC and
   JSON-RPC services as deprecated in favor of JSON-2. The scripts remain
   appropriate for this Odoo 19 demo lab, but a JSON-2 migration should be

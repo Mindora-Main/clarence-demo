@@ -26,6 +26,10 @@ log = logging.getLogger("verify_manifests")
 REPO = Path(__file__).resolve().parents[1]
 ADDONS = REPO / "addons"
 REQUIRED_KEYS = ("name", "version", "license", "depends", "installable")
+REMOVED_ODOO_19_MODULES = {
+    "pos_account": "accounting integration is provided by point_of_sale",
+    "pos_stock": "inventory integration is provided by point_of_sale",
+}
 
 
 def parse_manifest(path: Path) -> dict[str, Any]:
@@ -62,6 +66,13 @@ def check_addon(addon_dir: Path) -> list[str]:
         isinstance(d, str) and d for d in depends
     ):
         errors.append(f"{name}: 'depends' must be a list of non-empty strings")
+    else:
+        for dependency in depends:
+            if dependency in REMOVED_ODOO_19_MODULES:
+                errors.append(
+                    f"{name}: obsolete Odoo 19 dependency '{dependency}' "
+                    f"({REMOVED_ODOO_19_MODULES[dependency]})"
+                )
 
     manifest_data = data.get("data", [])
     if not isinstance(manifest_data, list) or not all(
