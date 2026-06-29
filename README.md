@@ -16,7 +16,7 @@ The repository is organised around demo branches. Each branch should become a se
 | `demo/01-al-noor-live-os` | Main live demo: Al Noor operating system | `mindora-demo-01-al-noor` |
 | `demo/02-sales` | CRM / sales engine | `mindora-demo-02-sales` |
 | `demo/03-trading-distribution-basic` | Basic trading and distribution | `mindora-demo-03-trading-basic` |
-| `demo/04-trading-distribution-warehouse` | Warehouse, barcode, replenishment | `mindora-demo-04-warehouse` |
+| `demo/04-warehouse` | Warehouse, barcode, replenishment | `mindora-demo-04-warehouse` |
 | `demo/05-retail-pos` | Retail / POS / showroom | `mindora-demo-05-pos` |
 | `demo/06-ecommerce-omnichannel` | Website + eCommerce + inventory | `mindora-demo-06-ecommerce` |
 | `demo/07-project-services` | Project services and timesheets | `mindora-demo-07-project-services` |
@@ -24,11 +24,15 @@ The repository is organised around demo branches. Each branch should become a se
 | `demo/09-workshop-manufacturing-l1` | Small workshop manufacturing | `mindora-demo-09-workshop` |
 | `demo/10-manufacturing-l2` | Factory production control | `mindora-demo-10-manufacturing-l2` |
 | `demo/11-production-l3` | Advanced production / PLM / quality | `mindora-demo-11-production-l3` |
-| `demo/12-hr` | HR and people operations | `mindora-demo-12-hr` |
+| `demo/12-people-ops` | HR and people operations | `mindora-demo-12-hr` |
 | `demo/13-marketing` | Marketing and growth engine | `mindora-demo-13-marketing` |
 | `demo/14-governance` | Documents, approvals, sign, control | `mindora-demo-14-governance` |
 | `demo/15-holding` | Clarence-style holding control tower | `mindora-demo-15-holding` |
 | `demo/16-ai-control-room` | AI agent / executive control room | `mindora-demo-16-ai` |
+
+## Alias note
+
+A few long branch names were shortened because the GitHub connector wrapper blocked verbose branch names during branch operations. Use the short branches above in Odoo.sh. Older long aliases may exist but should not be treated as the primary build branches unless you manually verify their latest commit.
 
 ## Build priority
 
@@ -36,7 +40,7 @@ Build these first:
 
 1. `demo/00-base-universal`
 2. `demo/01-al-noor-live-os`
-3. `demo/04-trading-distribution-warehouse`
+3. `demo/04-warehouse`
 4. `demo/08-field-service-after-sales`
 5. `demo/10-manufacturing-l2`
 6. `demo/15-holding`
